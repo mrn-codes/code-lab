@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروشگاه دیجیکالا</title>
+    <link
+        rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./icons/fontawesome/css/all.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header class="main_header">
+        <div class="header_banner">
+            <img src="./images/head-banner.webp" alt="">
+        </div>
+
+        <!--Middle container of header-->
+        <div class="main_section">
+            <div class="right_main_section">
+
+                <div class="logo_container">
+                    <img src="./images/Logo.svg" alt="Digikala Logo">
+                </div>
+
+                <div class="search_box_container">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass" style="color: #8b8b8b;"></i>
+                        <input type="search" placeholder="جستجو">
+                    </div>
+                </div>
+            </div>
+
+            <div class="left_main_section">
+                <i class="fa-regular fa-bell" style="color: rgb(50, 50, 50); font-size: 20px;"></i>
+
+                <div class="register_button">
+                    <i class="fa-solid fa-arrow-right-to-bracket" style="color: rgb(50, 50, 50);"></i>
+                    <p>ورود | ثبت نام</p>
+                </div>
+                <i class="fa-solid fa-cart-shopping" style="color: rgb(50, 50, 50);"></i>
+
+            </div>
+        </div>
+
+        <!--Navbar container of header-->
+        <div class="nav_container">
+            <div class="right_navbar">
+                <span>
+                    <i class="fa-solid fa-bars" style="color: rgb(171, 171, 171)"></i>
+                    <p>دسته بندی کالاها</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-percent" style="color: rgb(171, 171, 171);"></i>
+                    <p>شگفت‌انگیزها</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-basket-shopping" style="color: rgb(171, 171, 171);"></i>
+                    <p>سوپرمارکت</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-coins" style="color: rgb(171, 171, 171);"></i>
+                    <p>طلا و نقره دیجیتال</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-fire" style="color: rgb(171, 171, 171);"></i>
+                    <p>پرفروش ها</p>
+                </span>
+                <span>
+                    <i class="fa-solid fa-shirt" style="color: rgb(171, 171, 171);"></i>
+                    <p>دیجی استایل</p>
+                </span>
+                <span>
+                    <p>در دیجیکالا بفروشید!</p>
+                </span>
+            
+            </div>
+
+
+            <div class="left_navbar">
+                <div class="loc_btn">
+                    <i class="fa-solid fa-location-dot" style="color: rgb(245, 127, 23);"></i>
+                    <p>انتخاب آدرس</p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main_body">
+
+            <!-- MAIN SLIDER SWIPER CODES-->
+        <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/main-slider1.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/main-slider2.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/main-slider3.webp" alt="">
+
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/main-slider4.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/main-slider5.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/main-slider6.webp" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/main-slider7.webp" alt="">
+
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+        </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+        const progressCircle = document.querySelector('.autoplay-progress svg');
+        const progressContent = document.querySelector('.autoplay-progress span');
+        var swiper = new Swiper('.mySwiper', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            },
+            pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            },
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+            on: {
+            autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty('--progress', 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+            },
+            },
+        });
+        </script>
+
+
+        <div class="menu_under_slider">
+            <div>
+                <img src="./icons/digikala-icons/1.webp" alt="">
+                <p>دیجی‌استایل</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/2.webp" alt="">
+                <p>طلا و نقره دیجیتال</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/3.webp" alt="">
+                <p>سوپرمارکت</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/4.webp" alt="">
+                <p>وام بانکی، اعتبار خرید</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/5.webp" alt="">
+                <p>نوشیدنی گرم</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/6.webp" alt="">
+                <p>عطر خوش‌ قیمت</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/7.webp" alt="">
+                <p>تخفیف روشنایی</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/8.webp" alt="">
+                <p>در دیجی‌کالا بفروش</p>
+            </div>
+            <div>
+                <img src="./icons/digikala-icons/9.webp" alt="">
+                <p>فروشگا‌ه‌های حضوری‌دیجی‌کالا</p>
+            </div>
+        
+        </div>
+
+        <!--Second slider swiper codes -->
+
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="./icons/fontawesome/js/all.js"></script>
+</html>
