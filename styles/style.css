@@ -241,13 +241,17 @@ body {
 .menu_under_slider img{
     height: 57px;
     width: 57px;
+    transition: 0.2s;
+}
+.menu_under_slider img:hover{
+    transform: translateY(-5px);
 }
 
 .menu_under_slider div{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .menu_under_slider div{
@@ -256,8 +260,80 @@ body {
 
 .menu_under_slider > div:hover{
     cursor: pointer;
+    
 }
 
 
 
 /* Second slider swiper codes*/
+/* Second Swiper */
+
+.secondSwiper {
+    width: 80%;
+    height: 400px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.secondSwiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e90c0c;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Product Information */
+.info_box {
+    width: 50%;
+    height: 300px;
+    background-color: hsl(0, 94%, 80%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    border-radius: 10px;
+
+}
+.info_box p{
+    padding: 0 10px;
+    margin: 30px 0px;
+    font-weight: 200;
+}
+/* Product Image */
+.img_box {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    border-radius: 16px;
+    object-fit: contain;
+    margin-left: 50px;
+
+}
+
+.info_box button{
+    margin: 10px;
+    color: black;
+    background-color: #fe0202;
+    border-style: none;
+    box-shadow: none;
+    outline: none;
+    padding: 8px 16px;
+    font-family:"iranyekan_bold" ;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* Navigation */
+.secondSwiper .secondSwiper-button-next,
+.secondSwiper .secondSwiper-button-prev {
+    color: #fff;
+}
+
+/* Pagination */
+.secondSwiper .secondSwiper-pagination {
+    position: absolute;
+}
