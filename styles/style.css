@@ -12,7 +12,7 @@
     font-family: "iranyekan_medium";
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6, p, span{
     font-family:"iranyekan_bold" ;
 }
 
@@ -265,75 +265,746 @@ body {
 
 
 
-/* Second slider swiper codes*/
-/* Second Swiper */
+/* Main section */
 
-.secondSwiper {
-    width: 80%;
-    height: 400px;
-    margin-top: 30px;
-    border-radius: 10px;
+
+.main_body{
+    margin: 0 100px;
 }
 
-.secondSwiper .swiper-slide {
+
+/* Amazing slider */
+
+
+.amazing {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 16px;
+    background: linear-gradient(225deg, #d22c4e 0%, #ee384e 100%);
+    padding: 16px;
+    gap: 16px;
+    direction: rtl;
+    box-sizing: border-box;
+    margin-top:20px;
+}
+
+.amazing-info {
+    width: 150px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.amazing-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.amazing-logo {
+    width: 126px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.timer {
     display: flex;
     align-items: center;
+    gap: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.timer span {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #333;
+    border-radius: 4px;
+}
+
+.all {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.products {
+    display: flex;
+    flex: 1;
+    gap: 4px;
+    overflow: hidden;
+
+}
+
+.product {
+    width: 164px;
+    min-width: 164px;
+    background: white;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    background: #e90c0c;
-    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 6px;
+    border: 1px solid rgb(154, 154, 154);
+}
+
+.product:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.product img {
+    width: 164px;
+    height: 164px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.product h3 {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: #333;
+    height: 50px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.discount {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.percent {
+    background: #ef394e;
+    color: white;
+    border-radius: 20px;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.discount del {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.new-price {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #333;
+}
+
+.new-price strong {
+    font-size: 18px;
+}
+
+.new-price span {
+    font-size: 11px;
+}
+
+
+
+/* ‌4 banner */
+
+
+.banners {
+    width: 100%;
+    max-width: 1336px;
+    margin: 24px auto;
+
     box-sizing: border-box;
 }
 
-/* Product Information */
-.info_box {
-    width: 50%;
-    height: 300px;
-    background-color: hsl(0, 94%, 80%);
+.banner-list {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
-    border-radius: 10px;
+    gap: 16px;
+    width: 100%;
+}
 
-}
-.info_box p{
-    padding: 0 10px;
-    margin: 30px 0px;
-    font-weight: 200;
-}
-/* Product Image */
-.img_box {
-    width: 300px;
-    height: 300px;
-    border-radius: 12px;
+.banner {
+    display: block;
+    width: 25%;
+    min-width: 0;
     overflow: hidden;
     border-radius: 16px;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+/* Images menu*/
+
+
+.categories {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-top: 1px solid #a1c900;
+    background: #fff;
+    direction: rtl;
+}
+
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    row-gap: 16px;
+    column-gap: 12px;
+    width: 100%;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    cursor: pointer;
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin-left: 50px;
-
+    margin-bottom: 4px;
 }
 
-.info_box button{
-    margin: 10px;
-    color: black;
-    background-color: #fe0202;
-    border-style: none;
-    box-shadow: none;
-    outline: none;
-    padding: 8px 16px;
-    font-family:"iranyekan_bold" ;
+.category span {
+    color: #23254e;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+/* بنرها */
+
+.ads {
+    width: 100%;
+    max-width: 1304px;
+    margin: 20px auto 24px;
+    display: flex;
+    gap: 16px;
+    direction: rtl;
+}
+
+.ad {
+    width: 50%;
+    height: 258px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.ad img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* اسلایدر ویتامین */
+
+.vitamins {
+    width: 100%;
+    max-width: 1304px;
+    margin: 0 auto 24px;
+    border: 1px solid #e0e0e2;
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+.vitamin-head {
+    height: 91px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.vitamin-head h3 {
     font-size: 18px;
-    border-radius: 10px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #23254e;
 }
 
-/* Navigation */
-.secondSwiper .secondSwiper-button-next,
-.secondSwiper .secondSwiper-button-prev {
+.vitamin-head p {
+    font-size: 12px;
+    color: #767790;
+    margin: 0;
+}
+
+.vitamin-slider {
+    position: relative;
+    padding: 0 12px 24px;
+}
+
+.vitamin-list {
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+    direction: rtl;
+    display: flex;
+}
+
+.vitamin-card {
+    width: 164px;
+    min-width: 164px;
+    height: 276px;
+    border: 1px solid #e0e0e2;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.vitamin-img {
+    width: 164px;
+    height: 164px;
+    flex-shrink: 0;
+}
+
+.vitamin-info {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.vitamin-info p {
+    font-size: 13px;
+    line-height: 1.8;
+    height: 48px;
+    overflow: hidden;
+    margin: 0;
+    color: #424750;
+    text-align: right;
+}
+
+.vitamin-price {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.old-price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.old-price del {
+    font-size: 11px;
+    color: #c0c2c5;
+}
+
+.old-price span {
+    background: #ef394e;
     color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 20px;
 }
 
-/* Pagination */
-.secondSwiper .secondSwiper-pagination {
+.vitamin-price strong {
+    font-size: 16px;
+    color: #23254e;
+    text-align: left;
+}
+
+.vitamin-price small {
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.vitamin-next {
     position: absolute;
+    left: 0;
+    top: 45%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e0e0e2;
+    border-radius: 50%;
+    background: white;
+    font-size: 27px;
+    color: #424750;
+    cursor: pointer;
+}
+
+
+/*Footer*/
+
+.footer {
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #e0e0e2;
+    margin-top: 48px;
+    direction: rtl;
+    font-family: inherit;
+    color: #3f4064;
+}
+.footer a{
+    font-family:"iranyekan_medium" ;
+}
+
+.footer-main {
+    max-width: 1336px;
+    margin: 0 auto;
+    padding: 32px 20px 0;
+    box-sizing: border-box;
+}
+
+/* لوگو و بازگشت */
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-top img {
+    width: 195px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.footer-top button {
+    background: #fff;
+    border: 1px solid #e0e0e2;
+    border-radius: 8px;
+    color: #a1a3a8;
+    font-size: 12px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+/* پشتیبانی */
+
+.support {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    font-size: 12px;
+    color: #424750;
+}
+
+.support .line {
+    color: #c0c2c5;
+}
+
+/* مزایا */
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.feature {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.feature img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.feature p {
+    font-size: 11px;
+    color: #424750;
+    margin: 0;
+}
+
+/* ستون لینک ها */
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.link-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3f4064;
+    margin: 0 0 16px;
+}
+
+.link-col a {
+    text-decoration: none;
+    color: #81858b;
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.link-col a:hover {
+    color: #ef394e;
+}
+
+/* شبکه اجتماعی و خبرنامه */
+
+.footer-contact {
+    flex: 1.5;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.social a {
+    color: #a1a3a8;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.newsletter h3 {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.newsletter form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.newsletter input {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: #f0f0f1;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.newsletter button {
+    height: 48px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e0e2;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* اپلیکیشن */
+
+.app {
+    width: 100%;
+    min-height: 76px;
+    padding: 12px 20px;
+    background: #3c4b6d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 32px 0;
+}
+
+.app-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.app-title img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.app-title h2 {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+}
+
+.app-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-links img {
+    height: 44px;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+/* معرفی فروشگاه */
+
+.footer-about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 32px 0;
+    border-top: 1px solid #e0e0e2;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 18px;
+    color: #62666d;
+    margin: 0 0 16px;
+}
+
+.about-text h3 {
+    font-size: 15px;
+    color: #62666d;
+    margin: 20px 0 12px;
+}
+
+.about-text p {
+    font-size: 12px;
+    line-height: 2.2;
+    color: #81858b;
+    margin: 0 0 12px;
+}
+
+.more {
+    border: none;
+    background: transparent;
+    color: #19bfd3;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* نمادها */
+
+.trust {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trust a {
+    width: 90px;
+    height: 90px;
+    border: 1px solid #e0e0e2;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.trust img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* کپی رایت */
+
+.copyright {
+    border-top: 1px solid #e0e0e2;
+    padding: 28px 0;
+    text-align: center;
+    font-size: 11px;
+    line-height: 2;
+    color: #81858b;
+}
+
+/* مجموعه های وابسته */
+
+.partners {
+    width: 100%;
+    background: #f1f2f4;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    border-top: 1px solid #e0e0e2;
+}
+
+.partners a {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border-left: 1px solid #e0e0e2;
+    border-bottom: 1px solid #e0e0e2;
+    box-sizing: border-box;
+}
+
+.partners img {
+    max-width: 100%;
+    max-height: 28px;
+    object-fit: contain;
 }
